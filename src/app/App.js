@@ -1,11 +1,16 @@
 import React, { useEffect } from 'react';
-import { Switch, Route, useLocation, useRouteMatch } from "react-router-dom";
+import { Switch, Route, useLocation } from "react-router-dom";
+/* Components */
 import Header from './views/components/o-header/o-header.js';
-import Footer from './views/components/o-footer/o-footer.js'
-import Home from './views/pages/home/p-home.js';
-import Categories from './views/pages/category/p-categories.js';
+import Footer from './views/components/o-footer/o-footer.js';
+/* Routers */
+import CategoryRouter from './views/routers/CategoryRouter';
+import CollectionRouter from './views/routers/CollectionRouter.js';
+import ProductRouter from './views/routers/ProductRouter.js';
+/* Scenes */
+import Home from './views/scenes/home/HomeScene.js';
+/* Styles */
 import './App.css';
-import Product from './views/pages/product/p-product.js';
 
 function App() {
 	const { pathname, hash } = useLocation();
@@ -38,24 +43,25 @@ function App() {
     );
   }, [pathname, hash]);
 
+	// @TODO: Add a 'Page not found' UI if a path is not recognozed by the app.
   return (
     <div className="o-app">
       <Header/>
 			<hr />
 			<Switch>
-				<Route
-					exact
-					path="/"
-					component={Home}
-				/>
-				<Route
-					path='/categories'
-					component={Categories}
-				/>
-				<Route
-					path='/products/:productId'
-					component={Product}
-				/>
+				<Route exact path="/">
+					<Home />
+				</Route>
+				{/* @IDEA: Move routers below to a secondary navigation bar */}
+				<Route path={`/shop/categories`}>
+					<CategoryRouter />
+				</Route>
+				<Route path={`/shop/collections`}>
+					<CollectionRouter />
+				</Route>
+				<Route path={`/shop/products`}>
+					<ProductRouter />
+				</Route>
 			</Switch>
 			<hr />
 			<Footer />

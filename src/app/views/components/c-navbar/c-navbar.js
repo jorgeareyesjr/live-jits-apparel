@@ -1,14 +1,14 @@
 import React, { createRef } from 'react';
 import { Link } from "react-router-dom";
+import { Routes } from '../../../Routes.js';
 
-// @NOTE: Navbar should be sticky and have dropdown options.
 function Navbar(props) {
 	const dropdownMenu = createRef();
 
 	const navState = () => {
 		return props.navState();
 	}
-	
+
   return (
 		<>
 			<nav	
@@ -16,18 +16,23 @@ function Navbar(props) {
 				ref={dropdownMenu}
 			>
 				<ul className="c-nav">
-					<li>
-						<Link
-							to="/"
-							className="c-nav__anchor"
-						>Home</Link>
-					</li>
-					<li>
-						<Link
-							to="/categories"
-							className="c-nav__anchor"
-						>Categories</Link>
-					</li>
+					{
+						Routes.map((route, i) => {
+							// @TODO: Add support for primary routes
+							if (route.isPrimary) {
+								return (
+									<li key={i*i}>
+										<Link
+											to={route.path}
+											className="c-nav__anchor"
+										>{route.name}</Link>
+									</li>
+								)
+							};
+							// @TODO: Add support for secondary routes
+							return null;
+						})
+					}
 				</ul>
 			</nav>
 		</>
