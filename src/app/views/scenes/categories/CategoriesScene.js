@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useParams } from "react-router-dom";
 
-function CategoryScene() {
+function CategoriesScene() {
 	const { categoryId } = useParams();
 
 	console.log("Selected: categoryId: ", categoryId);
@@ -13,4 +13,4 @@ function CategoryScene() {
 	);
 };
 
-export default CategoryScene;
+export default CategoriesScene;

@@ -41,7 +41,6 @@
  * -> /shop/womens-apparel/womens-gis/product-2
  **/
 
-// @TODO: Add a unique `product_id` key to each product (this will help with the `ProductRouter` redirect URL).
 const Shop = [
 	/* MAIN APPAREL */
 
@@ -49,6 +48,7 @@ const Shop = [
 	{
 		product_category: 'gis',
 		product_collection: 'mens-apparel',
+		product_id: 1,
 		product_name: 'Mens Gi Type 1',
 		product_price: '$75.00',
 		product_sizes: [
@@ -88,6 +88,7 @@ const Shop = [
 	{
 		product_category: 'gis',
 		product_collection: 'mens-apparel',
+		product_id: 2,
 		product_name: 'Mens Gi Type 2',
 		product_price: '$70.00',
 		product_sizes: [
@@ -127,6 +128,7 @@ const Shop = [
 	{
 		product_category: 'gis',
 		product_collection: 'mens-apparel',
+		product_id: 3,
 		product_name: 'Mens Gi Type 3',
 		product_price: '$75.00',
 		product_sizes: [
@@ -167,6 +169,7 @@ const Shop = [
 	{
 		product_category: 'gis',
 		product_collection: 'womens-apparel',
+		product_id: 4,
 		product_name: 'Womens Gi Type 1',
 		product_price: '$75.00',
 		product_sizes: [
@@ -206,6 +209,7 @@ const Shop = [
 	{
 		product_category: 'gis',
 		product_collection: 'womens-apparel',
+		product_id: 5,
 		product_name: 'Womens Gi Type 2',
 		product_price: '$70.00',
 		product_sizes: [
@@ -245,6 +249,7 @@ const Shop = [
 	{
 		product_category: 'gis',
 		product_collection: 'womens-apparel',
+		product_id: 6,
 		product_name: 'Womens Gi Type 3',
 		product_price: '$75.00',
 		product_sizes: [
@@ -285,6 +290,7 @@ const Shop = [
 	{
 		product_category: 'gis',
 		product_collection: 'kids-apparel',
+		product_id: 7,
 		product_name: 'Kids Gi Type 1',
 		product_price: '$75.00',
 		product_sizes: [
@@ -324,6 +330,7 @@ const Shop = [
 	{
 		product_category: 'gis',
 		product_collection: 'kids-apparel',
+		product_id: 8,
 		product_name: 'Kids Gi Type 2',
 		product_price: '$75.00',
 		product_sizes: [
@@ -363,6 +370,7 @@ const Shop = [
 	{
 		product_category: 'gis',
 		product_collection: 'kids-apparel',
+		product_id: 9,
 		product_name: 'Kids Gi Type 3',
 		product_price: '$75.00',
 		product_sizes: [
@@ -403,6 +411,7 @@ const Shop = [
 	{
 		product_category: 'rashguards',
 		product_collection: 'mens-apparel',
+		product_id: 10,
 		product_name: 'Mens Rashguard Type 1',
 		product_price: '$75.00',
 		product_sizes: [
@@ -442,6 +451,7 @@ const Shop = [
 	{
 		product_category: 'rashguards',
 		product_collection: 'mens-apparel',
+		product_id: 11,
 		product_name: 'Mens Rashguard Type 2',
 		product_price: '$70.00',
 		product_sizes: [
@@ -481,6 +491,7 @@ const Shop = [
 	{
 		product_category: 'rashguards',
 		product_collection: 'mens-apparel',
+		product_id: 12,
 		product_name: 'Mens Rashguard Type 3',
 		product_price: '$75.00',
 		product_sizes: [
@@ -521,7 +532,8 @@ const Shop = [
 	{
 		product_category: 'rashguards',
 		product_collection: 'womens-apparel',
-		product_name: 'Womens Rashguard Type 1',
+		product_id: 13,
+		product_name: 'Womens Rashguard Type 1',		
 		product_price: '$75.00',
 		product_sizes: [
 			{
@@ -560,6 +572,7 @@ const Shop = [
 	{
 		product_category: 'rashguards',
 		product_collection: 'womens-apparel',
+		product_id: 14,
 		product_name: 'Womens Gi Type 2',
 		product_price: '$70.00',
 		product_sizes: [
@@ -599,6 +612,7 @@ const Shop = [
 	{
 		product_category: 'rashguards',
 		product_collection: 'womens-apparel',
+		product_id: 15,
 		product_name: 'Womens Rashguard Type 3',
 		product_price: '$75.00',
 		product_sizes: [
@@ -639,6 +653,7 @@ const Shop = [
 	{
 		product_category: 'rashguards',
 		product_collection: 'kids-apparel',
+		product_id: 16,
 		product_name: 'Kids Rashguard Type 1',
 		product_price: '$75.00',
 		product_sizes: [
@@ -678,6 +693,7 @@ const Shop = [
 	{
 		product_category: 'rashguards',
 		product_collection: 'kids-apparel',
+		product_id: 17,
 		product_name: 'Kids Rashguard Type 2',
 		product_price: '$75.00',
 		product_sizes: [
@@ -717,6 +733,7 @@ const Shop = [
 	{
 		product_category: 'rashguards',
 		product_collection: 'kids-apparel',
+		product_id: 18,
 		product_name: 'Kids Rashguard Type 3',
 		product_price: '$75.00',
 		product_sizes: [
@@ -760,6 +777,7 @@ const Shop = [
 	{
 		product_category: 'hats',
 		product_collection: 'mens-apparel',
+		product_id: 19,
 		product_name: 'Mens Hat Type 1',
 		product_price: '$75.00',
 		product_sizes: [
@@ -799,6 +817,7 @@ const Shop = [
 	{
 		product_category: 'hats',
 		product_collection: 'mens-apparel',
+		product_id: 20,
 		product_name: 'Mens Hat Type 2',
 		product_price: '$70.00',
 		product_sizes: [
@@ -838,6 +857,7 @@ const Shop = [
 	{
 		product_category: 'hats',
 		product_collection: 'mens-apparel',
+		product_id: 21,
 		product_name: 'Mens Hat Type 3',
 		product_price: '$75.00',
 		product_sizes: [
@@ -878,6 +898,7 @@ const Shop = [
 	{
 		product_category: 'hats',
 		product_collection: 'womens-apparel',
+		product_id: 22,
 		product_name: 'Womens Hat Type 1',
 		product_price: '$75.00',
 		product_sizes: [
@@ -917,6 +938,7 @@ const Shop = [
 	{
 		product_category: 'hats',
 		product_collection: 'womens-apparel',
+		product_id: 23,
 		product_name: 'Womens Hat Type 2',
 		product_price: '$70.00',
 		product_sizes: [
@@ -956,6 +978,7 @@ const Shop = [
 	{
 		product_category: 'hats',
 		product_collection: 'womens-apparel',
+		product_id: 24,
 		product_name: 'Womens Hat Type 3',
 		product_price: '$75.00',
 		product_sizes: [
@@ -996,6 +1019,7 @@ const Shop = [
 	{
 		product_category: 'hats',
 		product_collection: 'kids-apparel',
+		product_id: 25,
 		product_name: 'Kids Hat Type 1',
 		product_price: '$75.00',
 		product_sizes: [
@@ -1035,6 +1059,7 @@ const Shop = [
 	{
 		product_category: 'hats',
 		product_collection: 'kids-apparel',
+		product_id: 26,
 		product_name: 'Kids Hat Type 2',
 		product_price: '$75.00',
 		product_sizes: [
@@ -1074,6 +1099,7 @@ const Shop = [
 	{
 		product_category: 'hats',
 		product_collection: 'kids-apparel',
+		product_id: 27,
 		product_name: 'Kids Hat Type 3',
 		product_price: '$75.00',
 		product_sizes: [
@@ -1112,6 +1138,21 @@ const Shop = [
 	},
 ];
 
+function getAllShopAccessories(data) {
+	const allAccessories = [];
+
+	for (let i = 0; i < data.length; i++) {
+		if (data[i].product_is_accessory) {
+			// Ensure that product passes a redirect URL.
+			allAccessories.push({
+				...data[i],
+				redirect: `${data[i].product_collection}/${data[i].product_sku}`
+			});
+		}
+	};
+
+	return allAccessories;
+};
 function getAllShopCategories(data) {
 	let uniqueCategories = [];
 
@@ -1166,7 +1207,7 @@ function getAllShopProducts(data) {
 	};
 
 	return allProducts;
-}
+};
 
 /* FILTERS */
 function filterProductsByCategory(data, category) {
@@ -1177,6 +1218,7 @@ function filterProductsByCategory(data, category) {
 			filteredProducts.push(data[i])
 		};
 	};
+
 	return filteredProducts;
 };
 function filterProductsByCollection(data, collection) {
@@ -1192,35 +1234,24 @@ function filterProductsByCollection(data, collection) {
 
 	return filteredProducts;
 };
+function filterProductsByProductId(data, productId) {
+	const product = []; 
 
-const allShopCategories = getAllShopCategories(Shop);
-const allShopCollections = getAllShopCollections(Shop);
-const allShopProducts = getAllShopProducts(Shop);
+	for (let i = 0; i < data.length; i++) {
+		if (data[i].product_id === productId) {
+			product.push(data[i]);
+		}
+	};
 
-// @TODO: Pass these to the individual scenes
-const getAllProducts = getAllShopProducts(Shop);
-
-const getAllGis = filterProductsByCategory(Shop, 'gis');
-const getAllRashguards = filterProductsByCategory(Shop, 'rashguards');
-const getAllHats = filterProductsByCategory(Shop, 'hats');
-const getAllMensApparel = filterProductsByCollection(Shop, 'mens-apparel');
-const getAllWomensApparel = filterProductsByCollection(Shop, 'womens-apparel');
-const getAllKidsApparel = filterProductsByCollection(Shop, 'kids-apparel');
-const getAllAccessories = filterProductsByCollection(Shop, 'accessories');
-
-console.log("ALL PRODUCTS: ", getAllProducts);
-
-console.log("ALL GIS: ", getAllGis);
-console.log("ALL RASHGUARDS: ", getAllRashguards);
-console.log("ALL HATS: ", getAllHats);
-
-console.log("ALL MENS APPAREL: ", getAllMensApparel);
-console.log("ALL WOMENS APPAREL: ", getAllWomensApparel);
-console.log("ALL KIDS APPAREL: ", getAllKidsApparel);
-console.log("ALL ACCESSORIES: ", getAllAccessories);
+	return product;
+};
 
 export {
-	allShopCategories,
-	allShopCollections,
-	allShopProducts
+	getAllShopAccessories,
+	getAllShopCategories,
+	getAllShopCollections,
+	getAllShopProducts,
+	filterProductsByCategory,
+	filterProductsByCollection,
+	filterProductsByProductId,
 };

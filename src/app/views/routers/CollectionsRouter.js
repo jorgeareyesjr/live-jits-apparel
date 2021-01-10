@@ -1,15 +1,15 @@
 import React from 'react';
 import { Link, Route, useRouteMatch } from "react-router-dom";
-import { allShopCollections } from '../../../data/Shop.js';
-import CollectionScene from '../scenes/collection/CollectionScene.js';
+// import { allShopCollections } from '../../../data/Shop.js';
+// import CollectionsScene from '../scenes/collections/CollectionsScene.js';
 
-function CollectionRouter() {
+function CollectionsRouter() {
 	const { url } = useRouteMatch();
 	
   return (
     <div className="o-router o-router--collection">
 			<Route exact path={`${url}`}>
-				<ul>
+				{/* <ul>
 					{
 						allShopCollections.map(({ product_collection, redirect }, i) => {
 							return (
@@ -19,13 +19,13 @@ function CollectionRouter() {
 							)
 						})
 					}
-				</ul>
+				</ul> */}
 			</Route>
-			<Route exact path={`${url}/:collectionId`}>
-				<CollectionScene />
-			</Route>
+			{/* <Route exact path={`${url}/:collectionId`}>
+				<CollectionsScene />
+			</Route> */}
     </div>
   );
 }
 
-export default CollectionRouter;
+export default CollectionsRouter;

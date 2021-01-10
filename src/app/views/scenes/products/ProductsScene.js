@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useParams } from "react-router-dom";
 
-function ProductScene() {
+function ProductsScene() {
 	const { collectionId, productId } = useParams();
 
 	console.log("Selected: collectionId/productId: ", collectionId, productId);
@@ -13,4 +13,4 @@ function ProductScene() {
 	);
 };
 
-export default ProductScene;
+export default ProductsScene;

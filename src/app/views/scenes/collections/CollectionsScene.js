@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useParams } from "react-router-dom";
 
-function CollectionScene() {
+function CollectionsScene() {
 	const { collectionId } = useParams();
 
 	console.log("Selected: collectionId: ", collectionId);
@@ -13,4 +13,4 @@ function CollectionScene() {
 	);
 };
 
-export default CollectionScene;
+export default CollectionsScene;

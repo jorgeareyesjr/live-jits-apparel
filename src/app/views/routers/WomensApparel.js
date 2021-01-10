@@ -1,15 +1,15 @@
 import React from 'react';
 import { Link, Route, useRouteMatch } from "react-router-dom";
-import { allShopCategories } from '../../../data/Shop.js';
-import CategoryScene from '../scenes/category/CategoryScene.js';
+// import { allShopCategories } from '../../../data/Shop.js';
+// import CategoriesScene from '../scenes/categories/CategoriesScene.js';
 
-function CategoryRouter() {
+function WomensApparelRouter() {
 	const { url } = useRouteMatch();
 	
   return (
-    <div className="o-router o-router--category">
+    <div className="o-router o-router--mens-apparel">
 			<Route exact path={`${url}`}>
-				<ul>
+				{/* <ul>
 					{
 						allShopCategories.map(({ product_category, redirect }, i) => {
 							return (
@@ -19,13 +19,13 @@ function CategoryRouter() {
 							)
 						})
 					}
-				</ul>
+				</ul> */}
 			</Route>
-			<Route exact path={`${url}/:categoryId`}>
-				<CategoryScene />
-			</Route>
+			{/* <Route exact path={`${url}/:categoryId`}>
+				<CategoriesScene />
+			</Route> */}
     </div>
   );
 }
 
-export default CategoryRouter;
+export default WomensApparelRouter;
