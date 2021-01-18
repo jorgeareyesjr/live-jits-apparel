@@ -14,8 +14,6 @@ import Footer from './views/components/o-footer/o-footer.js';
 /* Scenes */
 import Home from './views/scenes/home/HomeScene.js';
 import NoMatch from './views/scenes/noMatch/NoMatchScene.js';
-/* Styles */
-import './App.css';
 
 function App() {
 	const { pathname, hash } = useLocation();
@@ -23,34 +21,34 @@ function App() {
 	// Effect to determine navigation behavior.
 	// If a hash in the URL is detected, jump to the specified element, otherwise, tell the router to switch to the top of the selected page.
 	useEffect(() => {
-    let useEffectAborted = false;
+		let useEffectAborted = false;
 
-    function scrollToTop() {
-      window.scrollTo(0, 0);
-    };
-    function scrollToID() {
-      const id = hash.replace('#', '');
-      const element = document.getElementById(id);
-      
-      if (element) {
-        window.scrollTo({ top: element.offsetTop});
-      }
-    };
+		function scrollToTop() {
+			window.scrollTo(0, 0);
+		};
+		function scrollToID() {
+			const id = hash.replace('#', '');
+			const element = document.getElementById(id);
 
-    if(!useEffectAborted) {
-      (hash === '') ? scrollToTop() : scrollToID();
-    }
+			if (element) {
+			window.scrollTo({ top: element.offsetTop});
+			}
+		};
 
-    return (
-      () => {
-        useEffectAborted = true;
-      }
-    );
-  }, [pathname, hash]);
+		if(!useEffectAborted) {
+			(hash === '') ? scrollToTop() : scrollToID();
+		}
+
+		return (
+			() => {
+			useEffectAborted = true;
+			}
+		);
+	}, [pathname, hash]);
 
   return (
-    <div className="o-app">
-      <Header/>
+		<div className="o-app">
+			<Header/>
 			<hr />
 			<Switch>
 				<Route exact path="/">
@@ -83,8 +81,8 @@ function App() {
 			</Switch>
 			<hr />
 			<Footer />
-    </div>
-  );
+		</div>
+	);
 }
 
 export default App;
