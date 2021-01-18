@@ -39,8 +39,8 @@
  * -> /shop/womens-apparel/womens-gis
  * -> /shop/womens-apparel/womens-gis/product-1
  * -> /shop/womens-apparel/womens-gis/product-2
+ * 
  **/
-
 const Shop = [
 	/* MAIN APPAREL */
 
