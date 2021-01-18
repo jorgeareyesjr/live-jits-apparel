@@ -1,6 +1,6 @@
 import React, { createRef } from 'react';
 import { Link } from "react-router-dom";
-import { Routes } from '../../../Routes.js';
+import { Routes } from '../../../routes/Routes.js';
 
 function Navbar(props) {
 	const dropdownMenu = createRef();
