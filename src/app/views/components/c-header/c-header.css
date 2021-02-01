@@ -1,0 +1,29 @@
+.c-header {
+	position: relative;
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	padding: 15px;
+	background: black;
+	z-index: 999;
+}
+.c-header__logo {
+	/* inside a css grid */
+	display: flex;
+	align-items: center;
+	height: 45px;
+	width: 75px;
+	grid-column-start: 3;
+	grid-column-end: 11;
+	grid-row-start: 1;
+	grid-row-end: 2;
+	text-align: center;
+	overflow: hidden;
+}
+.c-header__button {
+	/* inside a css grid */
+	grid-column-start: 12;
+	grid-column-end: 13;
+	grid-row-start: 1;
+	grid-row-end: 2;
+	text-align: center;
+}

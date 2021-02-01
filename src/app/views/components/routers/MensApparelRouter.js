@@ -20,6 +20,7 @@ function MensApparelRouter() {
 						})
 					}
 				</ul> */}
+				<p>TEST</p>
 			</Route>
 			{/* <Route exact path={`${url}/:categoryId`}>
 				<CategoriesScene />

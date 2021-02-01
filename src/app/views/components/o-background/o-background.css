@@ -1,0 +1,30 @@
+.o-background {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	background: black;
+}
+.o-background__overlay:nth-child(1) {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	max-width: 90vw;
+	background-image: linear-gradient(60deg, white, white, white, white, white, white, blue, blue, purple, purple, brown, brown, black, black, red, white, red, black, red);
+}
+.o-background__overlay:nth-child(2) {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	max-width: 90vw;
+	background-image: url(../../../assets/livejitslogo.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}

@@ -1,13 +1,17 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from "react-redux";
-import Grid from '../../components/o-grid/o-grid.js';
-import Tabs from '../../components/o-tabs/o-tabs.js';
+import Background from '../../components/o-background/o-background.js';
+import Header from '../../components/c-header/c-header.js';
+import Footer from '../../components/c-footer/c-footer.js';
+// import Grid from '../../components/o-grid/o-grid.js';
+// import Tabs from '../../components/c-tabs/c-tabs.js';
 import { debounce } from '../../../utilities/index.js';
 import { testConnection } from '../../../state/ducks/connection/operations.js';
+import './homeScene.css';
 
 const gridItems = [ 1, 2, 3 ];
 
-function HomeScene() {
+export default function HomeScene() {
 	const connection = useSelector(state => state.connection);
 	const dispatch = useDispatch();
 
@@ -56,21 +60,22 @@ function HomeScene() {
 
 	return (
 		<>
-			<main style={ { height: '1000vh' } }>
-				<section>
-					<h1>Tabs Section</h1>
-					<Tabs />
-				</section>
-				<section>
-					<h1>Grid Section</h1>
-					<Grid
-						gridItems={gridItems}
-						maxItemsInRow={3}
-					/>
-				</section>
-			</main>
+			<Background />
+			<div className="p-home">
+				<Header />
+				<Footer />
+			</div>
+			{/* <section>
+				<h1>Tabs Section</h1>
+				<Tabs />
+			</section>
+			<section>
+				<h1>Grid Section</h1>
+				<Grid
+					gridItems={gridItems}
+					maxItemsInRow={3}
+				/>
+			</section> */}
 		</>
 	)
 };
-
-export default HomeScene;

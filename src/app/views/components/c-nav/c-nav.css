@@ -1,0 +1,33 @@
+.c-nav {
+	position: relative;
+	background: #1d1d1d;
+	z-index: 999;
+}
+.c-nav--is-open {
+	border-bottom: 2px solid black;
+}
+.c-nav--is-open > .c-nav__links {
+	border-top: 2px solid #1d1d1d;
+	border-bottom: 2px solid #1d1d1d;
+}
+.c-nav__links {
+	position: relative;
+	max-height: 0;
+	overflow: hidden;
+	transition: all 0.3s;
+	z-index: 999;
+}
+.c-nav__link {
+	padding: 10px;
+}
+.c-nav__link a {
+	color: rgb(201, 201, 201);
+	text-decoration: none;
+}
+.c-nav__link:hover {
+	background: black;
+	color: white;
+}
+.c-nav__link:hover > a {
+	color: white;
+}

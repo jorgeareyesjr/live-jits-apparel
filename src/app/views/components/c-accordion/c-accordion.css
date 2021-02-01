@@ -1,0 +1,8 @@
+.c-accordion {
+	background: #e1e1e1e1;
+}
+.c-accordion__slide {
+	max-height: 0;
+	overflow: hidden;
+	transition: all 0.3s;
+}
